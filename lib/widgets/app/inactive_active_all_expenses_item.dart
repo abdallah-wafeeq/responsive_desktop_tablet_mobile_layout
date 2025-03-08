@@ -35,32 +35,41 @@ class InActiveAllExpensesItem extends StatelessWidget {
           SizedBox(
             height: 34,
           ),
-          AppText(
-            title: itemModel.title,
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-            fontFamily: "Montserrat",
-            color: AppColors.deepBlue,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: AppText(
+              title: itemModel.title,
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              color: AppColors.deepBlue,
+            ),
           ),
           SizedBox(
             height: 8,
           ),
-          AppText(
-            title: itemModel.date,
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            fontFamily: "Montserrat",
-            color: AppColors.grey2,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: AppText(
+              title: itemModel.date,
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              fontFamily: "Montserrat",
+              color: AppColors.grey2,
+            ),
           ),
           SizedBox(
             height: 12,
           ),
-          AppText(
-            title: itemModel.subtitle,
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            fontFamily: "Montserrat",
-            color: AppColors.primary,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: AppText(
+              title: itemModel.subtitle,
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              color: AppColors.primary,
+            ),
           ),
         ],
       ),
@@ -86,7 +95,9 @@ class ActiveAllExpensesItem extends StatelessWidget {
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
+            side: BorderSide(width: 1, color: AppColors.primary)
         ),
+
         color: AppColors.primary
     ),
       child: Column(
@@ -101,12 +112,15 @@ class ActiveAllExpensesItem extends StatelessWidget {
           SizedBox(
             height: 34,
           ),
-          AppText(
-            title: itemModel.title,
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-            fontFamily: "Montserrat",
-            color: AppColors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: AppText(
+              title: itemModel.title,
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              color: AppColors.white,
+            ),
           ),
           SizedBox(
             height: 8,
@@ -121,12 +135,15 @@ class ActiveAllExpensesItem extends StatelessWidget {
           SizedBox(
             height: 12,
           ),
-          AppText(
-            title: itemModel.subtitle,
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            fontFamily: "Montserrat",
-            color: AppColors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: AppText(
+              title: itemModel.subtitle,
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              color: AppColors.white,
+            ),
           ),
         ],
       ),
