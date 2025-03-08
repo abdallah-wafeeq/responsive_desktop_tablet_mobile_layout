@@ -21,17 +21,25 @@ class AllExpensesItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          decoration: ShapeDecoration(
-              color: imageBackground ?? AppColors.grey, shape: OvalBorder()),
-          child: Center(
-            child: SvgPicture.asset(
-              image,
-              colorFilter: ColorFilter.mode(
-                imageColor ?? AppColors.white,
-                BlendMode.srcIn,
+        Flexible(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 60),
+              child: Container(
+                width: 60,
+                height: 60,
+                decoration: ShapeDecoration(
+                    color: imageBackground ?? AppColors.grey, shape: OvalBorder()),
+                child: Center(
+                  child: SvgPicture.asset(
+                    image,
+                    colorFilter: ColorFilter.mode(
+                      imageColor ?? AppColors.white,
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
