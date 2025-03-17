@@ -6,15 +6,10 @@ import 'view/dashboard_desktop_layout.dart';
 void main() {
   runApp(
       DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) => MyApp(),
   ),
   );
-  // DevicePreview(
-  //   enabled: false,
-  //   builder: (context) => MaterialApp(),
-  // ),
-  // );
 }
 
 class MyApp extends StatelessWidget {
